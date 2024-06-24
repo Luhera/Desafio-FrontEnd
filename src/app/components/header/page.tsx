@@ -1,73 +1,98 @@
 import LogoIcon from "../../../../public/images/logo";
 import Image from "next/image";
-import Post from "../../../../public/images/Post01.png"; // Substitua pelo caminho da sua imagem
+import Post from "../../../../public/images/Post01.png";
 
-export default function Home() {
+const Header = () => {
   return (
-    <header className="container bg-[#290742] text-white px-4 pt-8 pb-6 border-b-4 border-[#00FF00]">
-      <section className="container mx-auto flex items-center justify-between px-4 mb-8">
-        <div className="flex-shrink-0">
+    <header className="bg-[#290742] text-white border-b-8 border-[#4FFF4B]">
+      <div className="max-w-[1120px] mx-auto px-4 py-8">
+        <section className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
           <LogoIcon />
-        </div>
-        <nav className="hidden lg:flex">
-          <ul className="flex gap-8">
-            <li>
-              <a href="#" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Sobre
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Categorias
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Contato
-              </a>
-            </li>
-          </ul>
-        </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <input
-            type="text"
-            placeholder="Buscar"
-            className="px-4 py-2 text-black rounded-md"
-          />
-        </div>
-      </section>
+          <nav>
+            <ul className="flex flex-wrap justify-center gap-4 md:gap-8">
+              <li>
+                <a href="#" className="hover:text-[#4FFF4B]">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#4FFF4B]">
+                  Sobre
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#4FFF4B]">
+                  Categorias
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#4FFF4B]">
+                  Contato
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-      <section className="w-full flex flex-col lg:flex-row justify-between items-center mt-20">
-        <div className="lg:w-1/2 p-4">
-          <h2
-            className="text-[#9E6DC2] text-4xl font-bold"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Veja o guia definitivo para conquistar seus objetivos como DEV em
-            2024
-          </h2>
-          <p className="text-white mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
-            eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
-            sed tristique placerat hac.
-          </p>
-          <button
-            className="hidden lg:block bg-transparent text-[#9E6DC2] px-2 py-1 rounded-md  border-[#9E6DC2] hover:bg-[#9E6DC2] hover:text-[#290742] transition-colors duration-300 mt-4"
-            style={{ fontFamily: "Roboto, sans-serif" }}
-          >
-            Veja mais &rarr;
-          </button>
-        </div>
-        <div className="lg:w-1/2 p-4">
-          <Image src={Post} alt="Example Image" className="rounded-md" />
-        </div>
-      </section>
+          <div className="flex items-center">
+            <input
+              type="text"
+              placeholder="Buscar"
+              className="bg-[#170027] text-white px-4 py-2 rounded-l-md focus:outline-none w-48"
+            />
+            <button className="bg-[#9E6DC2] p-2 rounded-r-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <section className="flex justify-between items-center">
+          <div className="w-1/2 pr-8">
+            <h2
+              className="text-[#BD8FD4] text-4xl font-bold leading-tight mb-4"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Veja o guia definitivo para conquistar seus objetivos como DEV em
+              2022
+            </h2>
+            <p className="text-[#FBF6FF] mt-4 mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
+              eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
+              sed tristique placerat hac.
+            </p>
+            <a
+              href="#"
+              className="text-[#9E6DC2] font-bold flex items-center"
+              style={{ fontFamily: "Roboto, sans-serif" }}
+            >
+              Veja mais <span className="ml-2">→</span>
+            </a>
+          </div>
+          <div className="w-1/2">
+            <Image
+              src={Post}
+              alt="Código de programação"
+              className="rounded-xl"
+              width={570}
+              height={320}
+              objectFit="cover"
+            />
+          </div>
+        </section>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;
