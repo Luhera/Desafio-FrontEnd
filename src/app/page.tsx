@@ -1,3 +1,4 @@
+"use client";
 import Header from "./components/header/page";
 import Main from "./components/main/page";
 

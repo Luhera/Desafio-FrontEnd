@@ -1,8 +1,20 @@
+"use client";
+import React, { useState } from "react";
 import LogoIcon from "../../../../public/images/logo";
 import Image from "next/image";
 import Post from "../../../../public/images/Post01.png";
 
-const Header = () => {
+const Header: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearchClick = () => {
+    alert(`Searching for: ${searchQuery}`);
+  };
+
   return (
     <header className="bg-[#290742] text-white border-b-8 border-[#4FFF4B]">
       <div className="max-w-[1120px] mx-auto px-4 py-8">
@@ -39,8 +51,13 @@ const Header = () => {
               type="text"
               placeholder="Buscar"
               className="bg-[#170027] text-white px-4 py-2 rounded-l-md focus:outline-none w-48"
+              value={searchQuery}
+              onChange={handleSearchChange}
             />
-            <button className="bg-[#9E6DC2] p-2 rounded-r-md">
+            <button
+              className="bg-[#9E6DC2] p-2 rounded-r-md"
+              onClick={handleSearchClick}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 text-white"
