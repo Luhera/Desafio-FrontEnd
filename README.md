@@ -16,3 +16,7 @@ bun dev
 Abra http://localhost:3000 com o seu navegador para ver o resultado.
 
 Este projeto usa next/font para otimizar e carregar automaticamente a fonte Inter, uma fonte personalizada do Google.
+
+## Tecnologias:
+Frontend: Next.js
+Estilização: Tailwind CSS
