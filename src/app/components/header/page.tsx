@@ -74,8 +74,8 @@ const Header: React.FC = () => {
           </div>
         </section>
 
-        <section className="flex justify-between items-center">
-          <div className="w-1/2 pr-8">
+        <section className="flex flex-col md:flex-row justify-between items-center">
+          <div className="w-full md:w-1/2 pr-0 md:pr-8 mb-8 md:mb-0">
             <h2
               className="text-[#BD8FD4] text-4xl font-bold leading-tight mb-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
@@ -96,7 +96,7 @@ const Header: React.FC = () => {
               Veja mais <span className="ml-2">→</span>
             </a>
           </div>
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2">
             <Image
               src={Post}
               alt="Código de programação"
