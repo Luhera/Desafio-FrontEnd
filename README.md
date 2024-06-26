@@ -4,6 +4,7 @@
 ## Tecnologias Utilizadas:
 - **Next.js**
 - **Tailwind CSS**
+- **Typescript**
 - **JavaScript**
 - **HTML**
 - **Vercel**
