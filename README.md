@@ -41,6 +41,4 @@ Este projeto usa next/font para otimizar e carregar automaticamente a fonte Inte
 ## Link
 
 Se quiser olhar o projeto sem necessitar baixar o repositorio é so entrar no link 
-```bash
-https://desafio-front-end-flax.vercel.app/
-```
+https://desafio-front-end-six.vercel.app/#
