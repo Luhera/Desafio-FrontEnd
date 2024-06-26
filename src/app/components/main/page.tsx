@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Foto1 from "../../../../public/images/Post02.png";
 import Foto2 from "../../../../public/images/Post03.png";
 import Foto3 from "../../../../public/images/Post04.png";
